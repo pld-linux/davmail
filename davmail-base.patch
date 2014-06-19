@@ -1,0 +1,24 @@
+--- davmail.sh.orig	2014-06-19 16:49:19.280469204 +0200
++++ davmail.sh	2014-06-19 16:49:49.817137372 +0200
+@@ -3,6 +3,20 @@
+ # install java :
+ # sudo apt-get install default-jre
+ # launch davmail
+-BASE=`dirname $0`
++PRG="$0"
++# Need this for relative symlinks.
++while [ -h "$PRG" ] ; do
++    ls=`ls -ld "$PRG"`
++    link=`expr "$ls" : '.*-> \(.*\)$'`
++    if expr "$link" : '/.*' > /dev/null; then
++        PRG="$link"
++    else
++        PRG=`dirname "$PRG"`"/$link"
++    fi
++done
++SAVED="`pwd`"
++cd "`dirname \"$PRG\"`" >&-
++BASE="`pwd -P`"
++cd "$SAVED" >&-
+ for i in $BASE/lib/*; do export CLASSPATH=$CLASSPATH:$i; done
+ exec java -Xmx512M -Dsun.net.inetaddr.ttl=60 -cp $BASE/davmail.jar:$CLASSPATH davmail.DavGateway $1
