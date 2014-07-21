@@ -12,13 +12,14 @@ Source1:	http://downloads.sourceforge.net/davmail/%{name}-linux-x86_64-%{version
 Patch0:		%{name}-base.patch
 URL:		http://davmail.sourceforge.net/
 Requires:	jdk
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 DavMail is a POP/IMAP/SMTP/Caldav/Carddav/LDAP exchange gateway
-allowing users to use any mail/calendar client (e.g. Thunderbird
-with Lightning or Apple iCal) with an Exchange server, even from
-the internet or behind a firewall through Outlook Web Access.
+allowing users to use any mail/calendar client (e.g. Thunderbird with
+Lightning or Apple iCal) with an Exchange server, even from the
+internet or behind a firewall through Outlook Web Access.
 
 %prep
 %setup -qcT
