@@ -11,7 +11,7 @@ Source1:	http://downloads.sourceforge.net/davmail/%{name}-linux-x86_64-%{version
 # Source1-md5:	94474d929f7ca70ded6d6088c5086595
 Patch0:		%{name}-base.patch
 URL:		http://davmail.sourceforge.net/
-Requires:	jdk
+Requires:	jre
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
