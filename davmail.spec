@@ -2,7 +2,7 @@
 Summary:	DavMail POP/IMAP/SMTP/Caldav/Carddav/LDAP Exchange Gateway
 Name:		davmail
 Version:	4.5.1
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Applications/Mail
 Source0:	http://downloads.sourceforge.net/davmail/%{name}-linux-x86-%{version}-%{rev}.tgz
@@ -22,7 +22,7 @@ internet or behind a firewall through Outlook Web Access.
 
 %prep
 %setup -qcT
-%ifarch i686 athlon
+%ifarch %{ix86}
 %{__tar} zxf %{SOURCE0} --strip-components=1
 %endif
 %ifarch %{x8664}
