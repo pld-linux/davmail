@@ -1,14 +1,14 @@
-%define		rev	2377
+%define		rev	2408
 Summary:	DavMail POP/IMAP/SMTP/Caldav/Carddav/LDAP Exchange Gateway
 Name:		davmail
-Version:	4.6.2
+Version:	4.7.0
 Release:	1
 License:	GPL v2
 Group:		Applications/Mail
 Source0:	http://downloads.sourceforge.net/davmail/%{name}-linux-x86-%{version}-%{rev}.tgz
-# Source0-md5:	fc7f8b95b6d1f3206194cadc706d913d
+# Source0-md5:	589d17b594ad5eef2ffd7aa01be52a38
 Source1:	http://downloads.sourceforge.net/davmail/%{name}-linux-x86_64-%{version}-%{rev}.tgz
-# Source1-md5:	86fcfa8d651b4bb2a3512db839c75900
+# Source1-md5:	b3b5b66f75aa7d6df1a93467318ad1e9
 Patch0:		%{name}-base.patch
 URL:		http://davmail.sourceforge.net/
 BuildRequires:	rpm-javaprov
