@@ -13,6 +13,7 @@ Patch0:		%{name}-base.patch
 URL:		http://davmail.sourceforge.net/
 BuildRequires:	rpm-javaprov
 Requires:	jre
+ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
