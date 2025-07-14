@@ -30,7 +30,7 @@ internet or behind a firewall through Outlook Web Access.
 %ifarch %{x8664}
 %{__tar} zxf %{SOURCE1} --strip-components=1
 %endif
-%patch0 -p0
+%patch -P0 -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
